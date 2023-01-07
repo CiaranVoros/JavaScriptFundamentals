@@ -1,22 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
-import React from 'react';
+import NewComponent from './components/newComponent';
 
-class App extends React.Component {
-	render() {
-		return (
-			<div>
-				<h1>Hello Dojo</h1>
-				<h3>Things I need to do</h3>
-				<ul>
-					<li>Learn React</li>
-					<li>Climb Mt everest</li>
-					<li>Run a marathon</li>
-					<li>Feed the dogs</li>
-				</ul>
-			</div>
-		);
-	}
+function App() {
+	return (
+		<div className="App">
+			<NewComponent firstName = {"jane"} lastName = {"doe"} age = {"25"} hairColor = {"black"}/>
+			<NewComponent firstName = {"john"} lastName = {"smith"} age = {"85"} hairColor = {"brown"}/>
+			<NewComponent firstName = {"maria"} lastName = {"smith"} age = {"55"} hairColor = {"brown"}/>
+			<NewComponent firstName = {"fillmore"} lastName = {"Millard"} age = {"65"} hairColor = {"brown"}/>
+		</div>
+	);
 }
 
 export default App;
