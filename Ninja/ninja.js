@@ -26,8 +26,8 @@ class Ninja {
 // ciaran.showStats();
 
 class Sensei extends Ninja {
-    constructor() {
-        super(200);
+    constructor(name) {
+        super(name, 200, 10, 10);
         this.wisdom = 10;
         this.health = 200;
         this.strength = 10;
@@ -44,3 +44,4 @@ const superNinja1 = new Sensei("Master Shredder")
 superNinja1.speakWisdom();
 superNinja1.speakWisdom();
 superNinja1.showStats();
+superNinja1.sayName();
