@@ -6,7 +6,6 @@ const BoxForm = (props) => {
     
     const createBox = (e) => {
         e.preventDefault();
-        console.log(color)
         props.boxes.push(color);
         props.setBoxes([... props.boxes])
     }
