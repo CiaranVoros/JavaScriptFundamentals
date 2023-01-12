@@ -1,15 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
 import PokeList from './components/PokemonList';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 function App() {
 
 	const [allPokemon, setAllPokemon] = useState([])
+	const [showPokemon, setShowPokemon] = useState(false)
+	
+	useEffect(()=>{
+		axios.get("https://pokeapi.co/api/v2/pokemon?limit=807&offset=0")
+		.then(allPokemon=>{setAllPokemon(allPokemon.data.results)})
+	}, []);
+
+	const listPokemon = (e) => {
+		e.preventDefault();
+		if(!showPokemon) {
+			setShowPokemon(true)
+		}
+		else {
+			setShowPokemon(false)
+		}
+	}
 
 	return (
 		<div className="App">
-			<PokeList allPokemon={allPokemon} setAllPokemon={setAllPokemon}></PokeList>
+		<button onClick={listPokemon}>All Pokemon</button>
+		{
+			showPokemon ?
+			
+				allPokemon.map((item, i) =>
+				<div key={i}> {item.name} </div>)
+			: ""
+		}
 		</div>
 	);
 }
