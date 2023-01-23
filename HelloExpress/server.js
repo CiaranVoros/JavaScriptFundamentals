@@ -53,5 +53,7 @@ app.get("/api/company/new", (req, res)=> {
 })
 
 app.get("/api/user/company", (req, res) => {
-  res.json([newFakeUser, newFakeCompany])
+  res.json({user : newFakeUser, company : newFakeCompany})
 })
+
+

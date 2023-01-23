@@ -10,7 +10,7 @@ function App() {
 	const [showPokemon, setShowPokemon] = useState(false)
 	
 	useEffect(()=>{
-		axios.get("https://pokeapi.co/api/v2/pokemon?limit=807&offset=0")
+		axios.get("	)
 		.then(allPokemon=>{setAllPokemon(allPokemon.data.results)})
 	}, []);
 
