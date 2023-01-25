@@ -22,7 +22,7 @@ const Form = (props) => {
         <div>
             <form onSubmit={getApi}>
                 <label >Search For</label>
-                <select name='' id='' onClick={handleType}>
+                <select  name='' id='' onClick={handleType}>
                     <option value="people">people</option>
                     <option value="planets">planets</option>
                     <option value="films">films</option>

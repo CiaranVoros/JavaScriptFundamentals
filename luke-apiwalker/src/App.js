@@ -12,7 +12,7 @@ import Content from './components/Content';
 
 function App() {
 
-	const [type, setType] = useState("")
+	const [type, setType] = useState("people")
 	const [id, setId] = useState(1)
 
 	return (
